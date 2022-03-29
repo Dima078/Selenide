@@ -18,7 +18,7 @@ public class CardTest {
         return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
 
-    private String planningDate = generateDate(4);
+    String planningDate = generateDate(6);
 
     @Test
     public void souldSendForm() {
@@ -49,7 +49,7 @@ public class CardTest {
         $("[class='notification__content']")
                 .shouldHave(Condition.text("Встреча успешно забронирована на " + dateCheck), Duration.ofSeconds(14));
     }
-    //--------------------------------------------------------------------------------------------------
+
     @Test
     public void souldWrongCity() {
         Configuration.holdBrowserOpen = true;
