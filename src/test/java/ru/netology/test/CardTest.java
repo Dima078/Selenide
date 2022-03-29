@@ -33,7 +33,7 @@ public class CardTest {
         $("[data-test-id=phone] input").setValue("+99999999999");
         $("[data-test-id=agreement]").click();
         $x("//*[@id=\"root\"]/div/form/fieldset/div[6]/div[2]/div/button").click();
-        $("[data-test-id = 'name'] .input__sub").should(Condition.appear, Duration.ofSeconds(3));
+        $("[data-test-id = 'name'] .input__sub").should(Condition.appear);
     }
 
     @Test
@@ -46,7 +46,7 @@ public class CardTest {
         $("[data-test-id=phone] input").setValue("+999999999");
         $("[data-test-id=agreement]").click();
         $x("//*[@id=\"root\"]/div/form/fieldset/div[6]/div[2]/div/button").click();
-        $("[data-test-id = 'phone'] .input__sub").should(Condition.appear, Duration.ofSeconds(3));
+        $("[data-test-id = 'phone'] .input__sub").should(Condition.appear);
     }
 
     @Test
@@ -58,6 +58,6 @@ public class CardTest {
         $("[data-test-id=name] input").setValue("Вася Теркин");
         $("[data-test-id=phone] input").setValue("+99999999999");
         $x("//*[@id=\"root\"]/div/form/fieldset/div[6]/div[2]/div/button").click();
-        $("[data-test-id=agreement]").should(Condition.appear, Duration.ofSeconds(3));
+        $("[data-test-id=agreement]").should(Condition.appear);
     }
 }
