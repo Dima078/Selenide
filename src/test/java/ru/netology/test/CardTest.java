@@ -2,8 +2,6 @@ package ru.netology.test;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
-import org.openqa.selenium.By;
-import com.codeborne.selenide.Selectors;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
@@ -25,7 +23,7 @@ public class CardTest {
         $("[data-test-id=\"notification\"]").should(Condition.appear, Duration.ofSeconds(14));
     }
 
-    /*@Test
+    @Test
     public void souldWrongCity() {
         Configuration.holdBrowserOpen = true;
         open("http://localhost:9999");
@@ -61,5 +59,5 @@ public class CardTest {
         $("[data-test-id=phone] input").setValue("+99999999999");
         $x("//*[@id=\"root\"]/div/form/fieldset/div[6]/div[2]/div/button").click();
         $("[data-test-id=agreement]").should(Condition.appear, Duration.ofSeconds(3));
-    }*/
+    }
 }
